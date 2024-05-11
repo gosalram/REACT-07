@@ -1,0 +1,131 @@
+/* Select all CSS */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Header CSS */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    width: auto;
+    background-color: rgb(1, 163, 144);
+    border-radius: 5px;
+    box-shadow: -1px 4px 20px 14px rgba(0, 0, 0, 0.2);
+    color: black;
+    font-weight: bold;
+}
+
+.logo{
+    padding-left: 10px;
+    width: 65px;
+    height: 65px;
+    margin: 10px auto;
+}
+
+
+.nav-items {
+    padding: 0 10px 0 ;
+    width: auto;
+}
+
+.nav-items > ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-items > ul > li{
+        padding: 33px 10px 0 0;
+        font-size: large;
+        cursor: pointer;
+}
+
+.login-btn{
+    color: black;
+    margin-top: 24px;
+    padding: 10px; 
+    cursor: pointer;
+}
+
+/* Body CSS */
+
+
+.filter{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+}
+
+.filter >div{
+    padding-right: 10px;
+}
+
+.filter-btn{
+    cursor: pointer;
+}
+
+
+.res-container{
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.res-card{
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: -1px 4px 20px 14px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.res-card:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+.res-img{
+    width: 100%;
+    border-radius: 10px;
+
+}
+.shimmer-container{
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.shimmer-card{
+    width: 200px;
+    height: 400px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+/* footer CSS */
+
+.footer{
+    margin: 10px;
+    width: auto;
+    text-align: center;
+    background-color: rgb(1, 163, 144);
+    padding: 20px 10px 20px;
+    border-radius: 5px;
+    box-shadow: -1px 4px 20px 14px rgba(0, 0, 0, 0.2);
+}
+
+.footer > strong{
+    padding-left: 5px;
+}
+
+.footer > strong > span{
+    color: rgb(203, 54, 0)
+}
