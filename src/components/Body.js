@@ -1,6 +1,8 @@
 import RestaurentCard from "./RestaurentCard";
 import Shimmer from "./Shimmer";
 import { useState,useEffect } from "react";
+import { RES_API } from "../utils/constants";
+import { Link } from "react-router-dom";
 
 const Body=()=>{
     //Local state variable = Supur powerful variable
@@ -13,12 +15,7 @@ useEffect(() =>{
     fetchData();
 },[]);
     const fetchData= async ()=>{
-        const data =await fetch(
-            // Koramangala
-            "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-            // Nagercoil
-            // "https://www.swiggy.com/dapi/restaurants/list/v5?lat=8.183285699999999&lng=77.4118996&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-        );
+        const data =await fetch(RES_API);
 
         const json = await data.json();
         // console.log(json);
@@ -57,7 +54,7 @@ useEffect(() =>{
                 <button className="filter-btn" 
                 onClick={() =>{
                 const filteredList=listOfRestaurant.filter(
-                    (res) => res.info.avgRating >4
+                    (res) => res.info.avgRating >4.2
                 );
                 setFilteredRestaurant(filteredList);
                 }}
@@ -67,9 +64,15 @@ useEffect(() =>{
             
             </div>
             <div className="res-container">
-                {
+                {   
                     filteredRestaurant.map((restaurant)=>(
-                        <RestaurentCard key={restaurant.info.id} resData={restaurant}/>
+                        <Link
+                            key={restaurant.info.id} 
+                            to={"/restaurants/"+ restaurant.info.id}
+                            style={{ textDecoration: 'none' }}
+                        > 
+                        <RestaurentCard resData={restaurant}/>
+                        </Link>
                     ))
                 }
                {/* restaurent cards (since reusage of it create as functional component) */}
