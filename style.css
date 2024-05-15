@@ -82,6 +82,8 @@
     padding: 10px;
     margin: 20px;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 
 .res-card:hover{
