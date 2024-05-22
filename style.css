@@ -112,6 +112,10 @@
     cursor: pointer;
 }
 
+
+.menu  >li{
+    list-style-type:circle;
+}
 /* footer CSS */
 
 .footer{
